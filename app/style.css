@@ -1,3 +1,9 @@
+/* declaration de variables */
+:root {
+    --main-bg-color: black;
+    --color: rgb(64, 232, 22, 75%);
+}
+
 /* mise a zero de la position de l'ensemble de la page */
 *{
     margin: 0;
@@ -5,14 +11,21 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black;
+    background-color: var(--main-bg-color);
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(64, 232, 22, 75%) ;
+    color: var(--color);
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
+/* mode light  */
+body.light{
+    --main-bg-color: white;
+    --color: rgb(22, 56, 232, 60%);
+    background-color: var(--main-bg-color);
+    color: var(--color);
+}
+
 /* accueil + titre */
 #accueil{
     width: 90%;
@@ -28,7 +41,7 @@ body{
 .carre_vert{
     width: 1em;
     height: 1em;
-    background-color: rgb(64, 232, 22, 75%);
+    background-color: var(--color);
     align-self: flex-end;
     margin-right: 2em;
 }
@@ -42,11 +55,22 @@ h1::after{
     display: block;
     width: 75%;
     height: 5px;
-    background-color: rgb(64, 232, 22, 75%);
+    background-color: var(--color);
 }
 /* Header avec nav */
+#btn_mode{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* margin: 15px; */
+    padding: 15px;
+    transform: scale(1.5);
+    background-color: var(--main-bg-color);
+    color: var(--color);
+    cursor: pointer;
+}
 header{
-    background-color: black;
+    background-color: var(--main-bg-color);
     width: 90%;
     height: 5em;
     position: sticky;
@@ -58,11 +82,11 @@ header::after{
     display: block;
     width: 100%;
     height: 5px;
-    background-color: rgb(64, 232, 22, 75%);
+    background-color: var(--color);
 }
 nav ul li a {
     /* changement de couleur des nav et annulation de soulignement */
-    color: rgb(64, 232, 22, 75%);
+    color: var(--color);
     text-decoration: none;
 }
 nav, ul{
@@ -83,7 +107,7 @@ li{
 }
 
 li a:hover{
-    text-shadow: 0px 0px 8px rgb(106, 255, 69);
+    text-shadow: 0px 0px 8px var(--color);
 }
 /* Page du profil/a propos */
 #a_propos{
@@ -119,8 +143,8 @@ h2{
 }
 figure:hover{
     cursor: pointer;
-    transform: scale(1.1);
-    transition: linear 0.3s;
+    transform: scale(1.05);
+    transition: linear 0.2s;
 }
 /* page de contact */
 #formulaire{
