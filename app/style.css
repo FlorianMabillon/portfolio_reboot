@@ -50,6 +50,7 @@ h1::after{
     height: 5px;
     background-color: var(--color);
 }
+/* *********************************************** */
 /* Header avec nav */
 header{
     background-color: var(--main-bg-color);
@@ -91,6 +92,7 @@ li{
 li a:hover{
     text-shadow: 0px 0px 8px var(--color);
 }
+/* *********************************************** */
 /* Page du profil/a propos */
 #a_propos{
     width: 90%;
@@ -98,23 +100,30 @@ li a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 25px;
+}
+#a_propos h2{
+    margin: 30px;
 }
 #p_profil{
-    width: 80%;
+    width: 70%;
+    margin: 30px;
     text-align: justify;
 }
 img{
     /* redimension des images */
     width: 150px;
     height: 150px;
-
 }
-/* page mes projet  */
+@media screen and (min-width: 426px){
+    #p_profil{
+        width: 60%;
+    }
+}
+/* *********************************************** */
+/* Page mes projet  */
 h2{
     margin-top: 25px;
 }
-
 #projets{
     width: 90%;
 }
@@ -124,18 +133,12 @@ h2{
     align-items: center;
     margin-top: 3em;
 }
-
 figure:hover{
     cursor: pointer;
     transform: scale(1.05);
     transition: linear 0.2s;
 }
-/* page de contact */
-#formulaire{
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-}
+/* Media queries de la page "Mes projets" */
 @media screen and (min-width: 426px) {
     #projets{
         display: flex;
@@ -166,3 +169,10 @@ figure:hover{
         height: 230px;
     }
 }
+/* page de contact */
+#formulaire{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
