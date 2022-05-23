@@ -62,7 +62,6 @@ h1::after{
     position: absolute;
     top: 0;
     right: 0;
-    /* margin: 15px; */
     padding: 15px;
     transform: scale(1.5);
     background-color: var(--main-bg-color);
@@ -126,21 +125,22 @@ img{
     /* redimension des images */
     width: 150px;
     height: 150px;
-    margin: 30px;
+
 }
 /* page mes projet  */
 h2{
     margin-top: 25px;
 }
-#projets{
-    width: auto;
-}
 
+#projets{
+    width: 90%;
+}
 .projet {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 figure:hover{
     cursor: pointer;
     transform: scale(1.05);
@@ -151,4 +151,15 @@ figure:hover{
     margin-top: 25px;
     display: flex;
     flex-direction: column;
+}
+@media screen and (min-width: 525px){
+    #projets{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .projet{
+        width: 33%;
+        margin-bottom: 3em;
+    }
 }
